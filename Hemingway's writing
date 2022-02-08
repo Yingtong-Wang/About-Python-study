@@ -1,0 +1,93 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyMxTYW7EzhDTLH2HaFML3hP",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Yingtong-Wang/About-Python-study/blob/main/Hemingway's%20writing\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#All of Hemingway’s writing\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "o-Y02pqFFajc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!wget https://github.com/Yingtong-Wang/About-Python-study/blob/main/Hemingway_AcrosstheRiverandIntothetrees.txt"
+      ],
+      "metadata": {
+        "id": "wYazbzuHPdAH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e1f96b92-8c5c-4d18-b246-9b6822e74529"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--2022-02-08 03:02:30--  https://github.com/Yingtong-Wang/About-Python-study/blob/main/Hemingway_AcrosstheRiverandIntothetrees.txt\n",
+            "Resolving github.com (github.com)... 140.82.121.3\n",
+            "Connecting to github.com (github.com)|140.82.121.3|:443... connected.\n",
+            "HTTP request sent, awaiting response... 404 Not Found\n",
+            "2022-02-08 03:02:30 ERROR 404: Not Found.\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!head Hemingway_AcrosstheRiverandIntothetrees.txt"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H7DqSmczRO1n",
+        "outputId": "ba54a0ad-ea17-4e01-eea9-7f5869665d86"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "head: cannot open 'Hemingway_AcrosstheRiverandIntothetrees.txt' for reading: No such file or directory\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
