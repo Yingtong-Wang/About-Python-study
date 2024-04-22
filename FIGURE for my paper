@@ -1,1 +1,50 @@
 # -*- coding: utf-8 -*-
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Ensure the proper Chinese font is used
+plt.rcParams['font.sans-serif'] = ['SimHei']  # This font must be installed on your system
+plt.rcParams['axes.unicode_minus'] = False  # Ensure the correct display of the minus sign
+
+# Defining sections and subsections with their logical connections
+sections = {
+    "摘要": [],
+    "一、绪论": ["研究的目的与意义", "文献综述", "研究思路与方法", "创新与不足"],
+    "二、相关概念与理论基础": ["相关概念界定", "理论基础"],
+    "三、案例介绍": [],
+    "四、路径分析": [],
+    "五、后果分析": [],
+    "六、结论与展望": [],
+    "七、致谢": [],
+    "参考文献": []
+}
+
+# Create figure and axes
+fig, ax = plt.subplots(figsize=(10, 8))  # Larger figure size
+
+# Draw sections and subsections
+x, y = 0.5, 1  # Start position at the top of the figure
+dx, dy = 0.2, -0.1  # Spacing between items
+
+# Function to draw rectangles and text
+def draw_box(x, y, text, ax, width=0.2, height=0.05, color='skyblue'):
+    rect = patches.Rectangle((x-width/2, y-height/2), width, height, linewidth=1, edgecolor='black', facecolor=color)
+    ax.add_patch(rect)
+    ax.text(x, y, text, horizontalalignment='center', verticalalignment='center', fontsize=10)
+
+# Plotting the sections and subsections
+for section, subs in sections.items():
+    draw_box(x, y, section, ax)
+    y_start = y  # Starting y position of the current section
+    y -= dy  # Move down for subsections
+    for sub in subs:
+        draw_box(x, y, sub, ax, color='lightgreen')
+        y -= dy  # Move down for next subsection
+    ax.plot([x, x], [y_start, y + dy], 'k-')  # Line connecting section and its subsections
+
+# Remove axis
+ax.set_xlim(0, 1)
+ax.set_ylim(y, 1)
+ax.axis('off')
+
+plt.show()
